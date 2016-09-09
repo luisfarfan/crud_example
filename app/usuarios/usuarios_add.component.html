@@ -1,0 +1,71 @@
+<div class="p-t-6 content-wrapper">
+    <div class="page-header">
+        <div class="breadcrumb-line">
+            <ul class="breadcrumb">
+                <li><a href="index.html"><i class="icon-home2 position-left"></i> Inicio</a></li>
+                <li><a href="2_col.html">Modulo de Seguridad</a></li>
+                <li class="active">Gestión de Usuario</li>
+                <li class="active">Agregar Usuarios</li>
+            </ul>
+            <ul class="breadcrumb-elements">
+                <li><a href="#"><i class="icon-spinner11 position-left"></i>Actualizar</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+
+        <div class="col-md-6 col-md-offset-3">
+            <div class="card">
+                <div class="card-block">
+
+                    <!--Header-->
+                    <div class="text-xs-center">
+                        <h3><i class="fa fa-plus"></i> Agregar Usuarios:</h3>
+                        <hr class="m-t-2 m-b-2">
+                    </div>
+
+                    <!--Body-->
+                    <form>
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix"></i>
+                            <input type="text" [(ngModel)]="model.dni" name="dni" class="form-control">
+                            <label for="form2">DNI</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix"></i>
+                            <input type="text" [(ngModel)]="model.ape_pat_per" name="ape_pat_per" class="form-control">
+                            <label for="form2">Apellido Paterno</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix"></i>
+                            <input type="text" [(ngModel)]="model.ape_mat_per" name="ape_mat_per" class="form-control">
+                            <label for="form2">Apellido Materno</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix"></i>
+                            <input type="text" [(ngModel)]="model.nom_emp_per" name="nom_emp_per" class="form-control">
+                            <label for="form2">Nombres y Apellidos</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix"></i>
+                            <input type="text" [(ngModel)]="model.email_insti" name="email_insti" class="form-control">
+                            <label for="form2">Correo</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-lock prefix"></i>
+                            <input type="password" [(ngModel)]="model.clave" name="clave" class="form-control">
+                            <label for="form4">Contraseña</label>
+                        </div>
+
+                        <div class="text-xs-center">
+                            <button type="button" (click)="newUser()" class="btn btn-deep-purple">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!--Footer-->
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<!-- /main navbar -->
+
+<div class="sidebar-content">
+    <!-- Main navigation -->
+    <div class="sidebar-category sidebar-category-visible">
+        <div class="category-content no-padding">
+            <ul class="navigation navigation-main navigation-accordion">
+                <!-- Main -->
+                <li class="navigation-header"><span>Menu Principal</span> <i class="icon-menu" title="Main pages"></i>
+                </li>
+                <li><a href="#"><i class="icon-home4"></i> <span>Inicio</span></a></li>
+                <li class="active">
+                    <a href="#"><i class="icon-stack"></i> <span>Modulo de Usuarios</span></a>
+                    <ul>
+                        <li><a routerLink="/"  routerLinkActive="active">Usuarios</a></li>
+                        <li><a routerLink="/add"  routerLinkActive="active">Agregar</a></li>
+                    </ul>
+                </li>
+                <!-- /main -->
+            </ul>
+        </div>
+    </div>
+    <!-- /main navigation -->
+
+</div>
+<router-outlet></router-outlet>
+
+<!-- Page container -->

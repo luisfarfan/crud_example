@@ -1,0 +1,22 @@
+[
+  {
+    "path": "seguridad",
+    "loadChildren": "app/seguridad.module"
+  },
+  {
+    "path": "gestion_de_usuarios",
+    "loadChildren": "app/gestion_de_usuarios.module"
+  },
+  {
+    "path": "gestion_de_roles",
+    "loadChildren": "app/gestion_de_roles.module"
+  },
+  {
+    "path": "gestion_de_sistemas",
+    "loadChildren": "app/gestion_de_sistemas.module"
+  },
+  {
+    "path": "capacitacion",
+    "loadChildren": "app/capacitacion.module"
+  }
+]

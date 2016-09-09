@@ -1,0 +1,132 @@
+<div class="p-t-6 content-wrapper">
+    <div class="page-header">
+        <div class="breadcrumb-line">
+            <ul class="breadcrumb">
+                <li><a href="index.html"><i class="icon-home2 position-left"></i> Inicio</a></li>
+                <li><a href="2_col.html">Modulo de Seguridad</a></li>
+                <li class="active">Gestión de Usuario</li>
+                <li class="active">Usuarios</li>
+            </ul>
+            <ul class="breadcrumb-elements">
+                <li><a href="#"><i class="icon-spinner11 position-left"></i>Actualizar</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h5 class="panel-title">Usuarios</h5>
+                <div class="heading-elements">
+                    <ul class="icons-list">
+                        <li>
+                            <a data-action="collapse"></a>
+                        </li>
+                        <li>
+                            <a data-action="reload"></a>
+                        </li>
+                        <li>
+                            <a data-action="close"></a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="heading-elements-toggle"><i class="icon-menu"></i></a></div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>Nombres</th>
+                            <th>Correo</th>
+                            <th>Usuario</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of users">
+                            <td>{{ item.ape_pat_per }}</td>
+                            <td>{{ item.ape_mat_per }}</td>
+                            <td>{{ item.nom_emp_per }}</td>
+                            <td>{{ item.email_insti }}</td>
+                            <td>{{ item.usuario }}</td>
+                            <td>
+
+                                <a type="button" (click)="editUser(item.url)" class="btn btn-info" data-toggle="modal" data-target="#modal-contact" class="teal-text"><i class="fa fa-pencil"></i></a>
+                                <a class="red-text"><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-contact">
+Contact Form
+</button>
+
+        <!-- Modal Contact -->
+        <div class="modal fade modal-ext" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                        <h4 class="modal-title" id="myModalLabel">Editar Usuario</h4>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        <form (ngSubmit)="save(user.url,f.value)" #f="ngForm">
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" [(ngModel)]="model.dni" name="dni" value="{{user.dni}}" class="form-control">
+                                <label class="active" for="form2">DNI</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" [(ngModel)]="model.ape_pat_per" name="ape_pat_per" value="{{user.ape_pat_per}}" class="form-control">
+                                <label class="active" for="form2">Apellido Paterno</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" [(ngModel)]="model.ape_mat_per" name="ape_mat_per" value="{{user.ape_mat_per}}" class="form-control">
+                                <label class="active" for="form2">Apellido Materno</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" [(ngModel)]="model.nom_emp_per" name="nom_emp_per" value="{{user.nom_emp_per}}"  class="form-control">
+                                <label class="active" for="form2">Nombres y Apellidos</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" [(ngModel)]="model.email_insti" name="email_insti" value="{{user.email_insti}}" class="form-control">
+                                <label class="active" for="form2">Correo</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" [(ngModel)]="model.clave" name="clave" value="{{user.clave}}" class="form-control">
+                                <label class="active"  for="form4">Contraseña</label>
+                            </div>
+
+                            <div class="text-xs-center">
+                                <button type="submit" class="btn btn-deep-purple">Editar Usuario</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+
+
+    </div>
+</div>
